@@ -1,0 +1,67 @@
+﻿@model List<Tisch>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<h1>Das sind meine Verfügbaren Tische im Restaurante</h1>
+<table>
+    <thead>
+    <tr>
+        <th>TischId</th>
+        <th>Länge</th>
+        <th>Breite</th>
+        <th>Höhe</th>
+    </tr>
+    </thead>
+    <tbody>
+    @{
+
+        foreach (var tisch in Model)
+        {
+            
+            <tr>
+                <td>@(tisch.TischId)</td>
+                <td>@(tisch.laenge)</td>
+                <td>@(tisch.breite)</td>
+                <td>@(tisch.hoehe)</td>
+            </tr>
+        }
+
+    }
+    
+    </tbody>
+    
+</table>
+
+<h1>Das sind meine Gäste im Restaurante</h1>
+<table>
+    <thead>
+    <tr>
+        <th>GastId</th>
+        <th>Vorname</th>
+        <th>Nachname</th>
+        <th>Aufenthaltsdauer</th>
+    </tr>
+    </thead>
+    <tbody>
+    @{
+
+        foreach (var gast in Model)
+        {
+            
+            <tr>
+                <td>@(gast.Gastid)</td>
+                <td>@(gast.vorname)</td>
+                <td>@(gast.nachname)</td>
+                <td>@(gast.aufenthaltsdauer)</td>
+            </tr>
+        }
+
+    }
+    
+    </tbody>
+    
+</table>
+
