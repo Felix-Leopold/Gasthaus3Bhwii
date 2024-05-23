@@ -1,0 +1,36 @@
+﻿@model List<BestellPosition>
+
+@{
+    ViewData["Title"] = "BestellPosition";
+}
+
+
+<h1>Das sind meine BestellPositionen</h1>
+<table>
+    <thead>
+    <tr>
+        <th>BestellPosition</th>
+        <th>ProduktId</th>
+        <th>BestellId</th>
+    </tr>
+    </thead>
+    <tbody>
+    @{
+
+        foreach (var bestellPosition in Model)
+        {
+            
+            <tr>
+                <td>@(bestellPosition.bestellpositionid)</td>
+                <td>@(bestellPosition.produktid)</td>
+                <td>@(bestellPosition.bestellid)</td>
+            </tr>
+        }
+
+    }
+    
+    </tbody>
+    
+</table>
+
+
