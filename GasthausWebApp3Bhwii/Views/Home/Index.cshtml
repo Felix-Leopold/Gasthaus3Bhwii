@@ -61,32 +61,33 @@
 
     }
     
-    <h1>Das sind meine Produkte im Restaurante</h1>
-    <table>
-        <thead>
-        <tr>
-            <th>ProduktId</th>
-            <th>Bezeichnung</th>
-            <th>Preis</th>
-            <th>Typ</th>
-        </tr>
-        </thead>
-        <tbody>
-        @{
+h1>Das sind meine Produkte im Restaurante</h1>
+table>
+   <thead>
+   <tr>
+       <th>ProduktId</th>
+       <th>Bezeichnung</th>
+       <th>Preis</th>
+       <th>Typ</th>
+   </tr>
+   </thead>
+   <tbody>
+   @{
     
-            foreach (var produkt in Model)
-            {
-                
-                <tr>
-                    <td>@(produkt.produktid)</td>
-                    <td>@(produkt.bezeichnung)</td>
-                    <td>@(produkt.preis)</td>
-                    <td>@(produkt.typ)</td>
-                </tr>
-            }
+       foreach (var produkt in Model)
+       {
+           
+           <tr>
+               <td>@(produkt.produktid)</td>
+               <td>@(produkt.bezeichnung)</td>
+               <td>@(produkt.preis)</td>
+               <td>@(produkt.typ)</td>
+           </tr>
+       }
     
-        }
-    
+   }
+        
+        
     </tbody>
     
 </table>

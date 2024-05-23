@@ -1,0 +1,38 @@
+﻿@model List<Mitarbeiter>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<h1>Das sind meine Verfügbaren Mitarbeiter im Restaurante</h1>
+<table>
+    <thead>
+    <tr>
+        <th>MitarbeiterId</th>
+        <th>Vorname</th>
+        <th>Nachname</th>
+        <th>Geburtsdatum</th>
+    </tr>
+    </thead>
+    <tbody>
+    @{
+
+        foreach (var mitarbeiter in Model)
+        {
+            
+            <tr>
+                <td>@(mitarbeiter.mitarbeiterid)</td>
+                <td>@(mitarbeiter.vorname)</td>
+                <td>@(mitarbeiter.nachname)</td>
+                <td>@(mitarbeiter.geburtsdatum)</td>
+            </tr>
+        }
+
+    }
+    
+    </tbody>
+    
+</table>
+
+

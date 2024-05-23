@@ -1,0 +1,38 @@
+﻿@model List<Tisch>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<h1>Das sind meine Verfügbaren Tische im Restaurante</h1>
+<table>
+    <thead>
+    <tr>
+        <th>TischId</th>
+        <th>Länge</th>
+        <th>Breite</th>
+        <th>Höhe</th>
+    </tr>
+    </thead>
+    <tbody>
+    @{
+
+        foreach (var tisch in Model)
+        {
+            
+            <tr>
+                <td>@(tisch.Tischid)</td>
+                <td>@(tisch.laenge)</td>
+                <td>@(tisch.breite)</td>
+                <td>@(tisch.hoehe)</td>
+            </tr>
+        }
+
+    }
+    
+    </tbody>
+    
+</table>
+
+
