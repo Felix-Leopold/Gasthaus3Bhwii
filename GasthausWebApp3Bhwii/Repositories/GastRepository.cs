@@ -29,7 +29,7 @@ public class GastRepository
             newGast.Gastid = (int)reader["gastid"];
             newGast.vorname = (string)reader["vorname"];
             newGast.nachname = (string)reader["nachname"];
-            newGast.aufenthaltdauer = (DateOnly)reader["aufenthaltdauer"];
+            newGast.aufenthaltdauer = (TimeSpan)reader["aufenthaltdauer"];
             
             gasts.Add(newGast);
 
