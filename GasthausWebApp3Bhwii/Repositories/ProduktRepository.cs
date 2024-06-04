@@ -27,10 +27,10 @@ public class ProduktRepository
         {
             // Datensätzte in Objekte umwandeln
             Produkt newProdukt = new Produkt();
-            newProdukt.produktid = (int)reader["ProduktId"];
-            newProdukt.bezeichnung = (string)reader["Bezeichnung"];
-            newProdukt.preis = (double)reader["Preis"];
-            newProdukt.typ = (string)reader["Typ"];
+            newProdukt.produktid = (int)reader["produktid"];
+            newProdukt.bezeichnung = (string)reader["bezeichung"];
+            newProdukt.preis = (double)reader["preis"];
+            newProdukt.typ = (string)reader["typ"];
             
             produkts.Add(newProdukt);
 

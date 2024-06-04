@@ -26,10 +26,10 @@ public class GastRepository
         {
             // Datensätzte in Objekte umwandeln
             Gast newGast = new Gast();
-            newGast.Gastid = (int)reader["GastId"];
-            newGast.vorname = (string)reader["Vorname"];
-            newGast.nachname = (string)reader["Nachname"];
-            newGast.aufenthaltsdauer = (TimeOnly)reader["Aufenthaltsdauer"];
+            newGast.Gastid = (int)reader["gastid"];
+            newGast.vorname = (string)reader["vorname"];
+            newGast.nachname = (string)reader["nachname"];
+            newGast.aufenthaltdauer = (DateOnly)reader["aufenthaltdauer"];
             
             gasts.Add(newGast);
 

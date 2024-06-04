@@ -1,0 +1,42 @@
+﻿@model List<Gast>
+
+@{
+    ViewData["Title"] = "Gäste";
+}
+
+
+<h1>Das sind meine Gäste</h1>
+<table>
+    <thead>
+    <tr>
+        <th>GastId</th>
+        <th>Vorname</th>
+        <th>Nachname</th>
+        <th>Aufenthaltsdauer</th>
+       
+        
+    </tr>
+    </thead>
+    <tbody>
+    @{
+
+        foreach (var gast in Model)
+        {
+            
+            <tr>
+                <td>@(gast.Gastid)</td>
+                <td>@(gast.vorname)</td>
+                <td>@(gast.nachname)</td>
+                <td>@(gast.aufenthaltdauer)</td>
+                
+                
+            </tr>
+        }
+
+    }
+    
+    </tbody>
+    
+</table>
+
+

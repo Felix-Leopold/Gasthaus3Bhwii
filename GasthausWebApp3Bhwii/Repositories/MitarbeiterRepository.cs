@@ -27,10 +27,10 @@ public class MitarbeiterRepository
         {
             // Datensätzte in Objekte umwandeln
             Mitarbeiter newMitarbeiter = new Mitarbeiter();
-            newMitarbeiter.mitarbeiterid = (int)reader["MitarbeiterId"];
-            newMitarbeiter.vorname = (string)reader["Vorname"];
-            newMitarbeiter.nachname = (string)reader["Nachname"];
-            newMitarbeiter.geburtsdatum = (DateOnly)reader["Geburtsdatum"];
+            newMitarbeiter.mitarbeiterid = (int)reader["mitarbeiterid"];
+            newMitarbeiter.vorname = (string)reader["vorname"];
+            newMitarbeiter.nachname = (string)reader["nachname"];
+            newMitarbeiter.geburtsdatum = (DateTime)reader["geburtsdatum"];
             
             mitarbeiters.Add(newMitarbeiter);
 
