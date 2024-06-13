@@ -1,6 +1,7 @@
 using GasthausWebApp3Bhwii.Models;
 using GasthausWebApp3Bhwii.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.WebUtilities;
 
 namespace GasthausWebApp3Bhwii.Controllers;
 
@@ -22,4 +23,15 @@ public class TischController : Controller
         return View();
 
     }
+
+    [HttpPost]
+    public IActionResult SaveTisch(Tisch tisch)
+    {
+        TischRepository repo_tisch = new TischRepository();
+        
+        repo_tisch.CreateTisch(tisch);
+
+        return Redirect("/Tisch");
+    }
+    
 }
