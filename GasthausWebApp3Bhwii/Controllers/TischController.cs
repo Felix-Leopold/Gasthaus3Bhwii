@@ -15,6 +15,11 @@ public class TischController : Controller
         
         return View(mytische);
         
-        
+    }
+
+    public IActionResult New()
+    {
+        return View();
+
     }
 }

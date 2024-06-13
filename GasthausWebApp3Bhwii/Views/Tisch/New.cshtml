@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Tische";
+}
+
+
+<h1>Neuen Tisch erstellen</h1>
+<form action="/Tisch/SaveTisch" method="post">
+    <table class="table">
+        <thead>
+        <tr>
+            <td>Bezeichnung</td>
+            <td>Angabe</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>laenge</td>
+            <td>
+                <input type="number" name="laenge">
+            </td>
+        </tr>
+        <tr>
+            <td>breite</td>
+            <td>
+                <input type="number" name="breite">
+            </td>
+        </tr>
+
+        <tr>
+            <td>hoehe</td>
+            <td>
+                <input type="number"name="hoehe">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/Tisch" class="btn btn-danger">Abbrechen</a>
+            </td>
+            <td>
+                <button class="btn btn-success">Speichern</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
